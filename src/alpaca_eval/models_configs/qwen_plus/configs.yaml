@@ -1,0 +1,13 @@
+qwen_plus:
+  prompt_template: "qwen_plus/prompt.txt"
+  fn_completions: "openai_completions"
+  completions_kwargs:
+    model_name: "qwen-plus"
+    max_tokens: 8192
+  pretty_name: "Qwen-Plus"
+
+
+
+
+
+
