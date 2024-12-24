@@ -323,6 +323,12 @@ def _get_price_per_token(model, price_per_token=None):
         return 0.02 / 1000
     elif "qwen-plus" in model:
         return 0.0008 / 1000
+    elif "glm-4-flashx" in model:
+        return 0.0001 / 1000
+    elif "glm-4-flash" in model:
+        return 0
+    elif "glm-4-air" in model:
+        return 0.001 / 1000
     else:
         logging.warning(f"Unknown model {model} for computing price per token.")
         return np.nan
