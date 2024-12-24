@@ -321,6 +321,8 @@ def _get_price_per_token(model, price_per_token=None):
         return 0.002 / 1000
     elif "text-davinci-003" in model:
         return 0.02 / 1000
+    elif "qwen-plus" in model:
+        return 0.0008 / 1000
     else:
         logging.warning(f"Unknown model {model} for computing price per token.")
         return np.nan
