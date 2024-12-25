@@ -6,7 +6,7 @@ MODEL_NAME="mistral-ipo-vllm1"
 # 设置文件路径变量，使用模型名称
 DATA_PATH="autodl-tmp/inference/alpaca_eval-$MODEL_NAME"
 OUTPUTS_PATH="autodl-tmp/rewards/alpaca_eval-$MODEL_NAME"
-ANNOTATORS_CONFIG="weighted_alpaca_eval_deepseek"
+ANNOTATORS_CONFIG="weighted_alpaca_eval_deepseek_chat"
 
 # 设置环境变量
 export OPENAI_API_KEY='sk-939897bcd73244488114250043c8d36b'
