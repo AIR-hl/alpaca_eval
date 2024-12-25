@@ -329,6 +329,8 @@ def _get_price_per_token(model, price_per_token=None):
         return 0
     elif "glm-4-air" in model:
         return 0.001 / 1000
+    elif "deepseek-chat" in model:
+        return 0.0001 / 1000
     else:
         logging.warning(f"Unknown model {model} for computing price per token.")
         return np.nan

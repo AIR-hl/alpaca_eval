@@ -1,0 +1,13 @@
+deepseek_chat:
+  prompt_template: "deepseek_chat/prompt.txt"
+  fn_completions: "openai_completions"
+  completions_kwargs:
+    model_name: "deepseek-chat"
+    max_tokens: 4096
+  pretty_name: "DeepSeek-Chat"
+
+
+
+
+
+
