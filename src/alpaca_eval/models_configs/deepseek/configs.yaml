@@ -1,0 +1,13 @@
+qwen_plus:
+  prompt_template: "deepseek/prompt.txt"
+  fn_completions: "openai_completions"
+  completions_kwargs:
+    model_name: "deepseek"
+    max_tokens: 4096
+  pretty_name: "DeepSeek"
+
+
+
+
+
+
