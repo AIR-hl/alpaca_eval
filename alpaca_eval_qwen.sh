@@ -16,7 +16,7 @@ export OPENAI_BASE_URL='https://dashscope.aliyuncs.com/compatible-mode/v1'
 python convert_format.py --data_dir "$DATA_PATH" --output_path "$OUTPUTS_PATH" --model_name "$MODEL_NAME"
 
 # 运行 Alpaca Eval
-alpaca_eval --model_outputs "$OUTPUTS_PATH/outputs.json" --annotators_config "$ANNOTATORS_CONFIG"
+alpaca_eval --model_outputs "$OUTPUTS_PATH/outputs.json" --annotators_config "$ANNOTATORS_CONFIG" --is_overwrite_leaderboard=IS_OVERWRITE_LEADERBOARD
 
 
 # 计算总花费

@@ -1,0 +1,13 @@
+glm-4-flash:
+  prompt_template: "glm-4-air/prompt.txt"
+  fn_completions: "openai_completions"
+  completions_kwargs:
+    model_name: "glm-4-flash"
+    max_tokens: 8192
+  pretty_name: "GLM-4-Flash"
+
+
+
+
+
+

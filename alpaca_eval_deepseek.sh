@@ -16,7 +16,7 @@ export OPENAI_BASE_URL='https://api.deepseek.com/v1'
 python convert_format.py --data_dir "$DATA_PATH" --output_path "$OUTPUTS_PATH" --model_name "$MODEL_NAME"
 
 # 运行 Alpaca Eval
-alpaca_eval --model_outputs "$OUTPUTS_PATH/outputs.json" --annotators_config "$ANNOTATORS_CONFIG"
+alpaca_eval --model_outputs "$OUTPUTS_PATH/outputs.json" --annotators_config "$ANNOTATORS_CONFIG" --is_overwrite_leaderboard=IS_OVERWRITE_LEADERBOARD
 
 
 # 计算总花费
@@ -27,9 +27,7 @@ import pandas as pd
 ds = pd.read_json('$OUTPUTS_PATH/$ANNOTATORS_CONFIG/annotations.json', orient='records', lines=False)
 
 # 计算总花费
-
 total_cost = ds[[col for col in ds.columns if col.endswith('price_per_example')][0]].sum()
-
 
 # 保存到txt文件
 with open('$OUTPUTS_PATH/$ANNOTATORS_CONFIG/cost.txt', 'w') as f:
